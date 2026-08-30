@@ -29,16 +29,16 @@
 # jabelchi, 2023
 # martioodo hola, 2023
 # Óscar Fonseca <tecnico@extreme-micro.com>, 2023
-# "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2025, 2026.
-# Ricard Calvo <ricard.calvo@forgeflow.com>, 2025.
+# Ricard Calvo <ricard.calvo@forgeflow.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:36+0000\n"
-"PO-Revision-Date: 2026-03-06 17:46+0000\n"
+"POT-Creation-Date: 2026-07-10 17:37+0000\n"
+"PO-Revision-Date: 2026-08-08 03:36+0000\n"
 "Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
 "Language-Team: Catalan <https://translate.odoo.com/projects/odoo-19/sale/ca/>"
 "\n"
@@ -47,7 +47,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.1\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale
 #. odoo-javascript
@@ -117,32 +117,6 @@ msgid ""
 msgstr ""
 ", és 100% gratuït! Estalviaràs temps creant bons pressupostos i fer un "
 "seguiment de les vendes."
-
-#. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-msgid "2023-12-31"
-msgstr "2023-12-31"
-
-#. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-msgid "25.00"
-msgstr ""
-
-#. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-#: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content
-msgid "27.00"
-msgstr "27,00"
-
-#. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-msgid "30.00"
-msgstr "30,00"
-
-#. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content
-msgid "31.05"
-msgstr "31,05"
 
 #. module: sale
 #. odoo-javascript
@@ -218,18 +192,17 @@ msgstr ""
 "value=\"object.get_portal_last_transaction()\"/>\n"
 "        Hola:\n"
 "        <br/><br/>\n"
-"        El pagament amb referència\n"
+"        El pagament de la teva comanda amb referència\n"
 "        <span style=\"font-weight:bold;\" t-out=\"transaction_sudo.reference "
 "or ''\">SOOO49</span>\n"
 "        per un import de\n"
-"        <span style=\"font-weight:bold;\" t-"
-"out=\"format_amount(transaction_sudo.amount, object.currency_id) or ''\">10 "
-"€</span>\n"
-"        per a la seva comanda\n"
-"        <span style=\"font-weight:bold;\" t-out=\"object.name or "
-"''\">S00049</span>\n"
-"        <t t-if=\"transaction_sudo and transaction_sudo.state == "
-"'pending'\">\n"
+"        <span style=\"font-weight:bold;\" t-out=\"format_amount"
+"(transaction_sudo.amount, object.currency_id) or ''\">10 €</span>\n"
+"        \n"
+"        <span style=\"font-weight:bold;\" t-out=\"object.name or ''\">"
+"S00049</span>\n"
+"        <t t-if=\"transaction_sudo and transaction_sudo.state == 'pending'\">"
+"\n"
 "            està pendent de pagament.\n"
 "            <br/>\n"
 "            <t t-if=\"object.currency_id.compare_amounts(object.amount_paid "
@@ -239,9 +212,9 @@ msgstr ""
 "            </t>\n"
 "            <t t-else=\"\">\n"
 "                Un cop confirmat el pagament,\n"
-"                <span style=\"font-weight:bold;\" t-"
-"out=\"format_amount(object.amount_total - object.amount_paid - "
-"transaction_sudo.amount, object.currency_id) or ''\">10 €</span>\n"
+"                <span style=\"font-weight:bold;\" t-out=\"format_amount"
+"(object.amount_total - object.amount_paid - transaction_sudo.amount, "
+"object.currency_id) or ''\">10 €</span>\n"
 "                quedaran pendents d'abonar.\n"
 "            </t>\n"
 "        </t>\n"
@@ -250,16 +223,16 @@ msgstr ""
 "            <t t-if=\"object.currency_id.compare_amounts(object.amount_paid, "
 "object.amount_total) &lt; 0\">\n"
 "                <br/>\n"
-"                <span style=\"font-weight:bold;\" t-"
-"out=\"format_amount(object.amount_total - object.amount_paid, "
-"object.currency_id) or ''\">10 €</span>\n"
+"                <span style=\"font-weight:bold;\" t-out=\"format_amount"
+"(object.amount_total - object.amount_paid, object.currency_id) or ''\">10 €</"
+"span>\n"
 "                a pagar.\n"
 "            </t>\n"
 "        </t>\n"
 "        <br/><br/>\n"
-"        Gràcies per la seva confiança!\n"
+"        Gràcies per confiar en nosaltres!\n"
 "        <br/>\n"
-"        No dubti a contactar amb nosaltres si té alguna pregunta.\n"
+"        No dubtis a contactar amb nosaltres si tens qualsevol pregunta.\n"
 "        <t t-if=\"not is_html_empty(object.user_id.signature)\" data-o-mail-"
 "quote-container=\"1\">\n"
 "            <div data-o-mail-quote=\"1\">--<br data-o-mail-quote=\"1\"/><t t-"
@@ -601,7 +574,7 @@ msgstr ""
 "        <br/><br/>\n"
 "        <t t-set=\"tx_sudo\" t-value=\"object.get_portal_last_transaction()"
 "\"/>\n"
-"        La seva comanda <span style=\"font-weight:bold;\" t-"
+"        La teva comanda <span style=\"font-weight:bold;\" t-"
 "out=\"object.name or ''\">S00049</span> per un import de <span style=\"font-"
 "weight:bold;\" t-out=\"format_amount(object.amount_total, "
 "object.currency_id) or ''\">10,00 €</span>\n"
@@ -625,10 +598,10 @@ msgstr ""
 "            <br/>\n"
 "            <t t-if=\"len(documents)&gt;1\">\n"
 "                Aquí hi ha alguns documents addicionals que potser "
-"l'interessen:\n"
+"t'interessen:\n"
 "            </t>\n"
 "            <t t-else=\"\">\n"
-"                Aquí hi ha un document addicional que potser l'interessa:\n"
+"                Aquí hi ha un document addicional que potser t'interessa:\n"
 "            </t>\n"
 "            <ul style=\"margin-bottom: 0;\">\n"
 "                <t t-foreach=\"documents\" t-as=\"document\">\n"
@@ -641,7 +614,7 @@ msgstr ""
 "            </ul>\n"
 "        </t>\n"
 "        <br/>\n"
-"        No dubti a contactar amb nosaltres si té qualsevol pregunta.\n"
+"        No dubtis a contactar amb nosaltres si tens qualsevol pregunta.\n"
 "        <t t-if=\"not is_html_empty(object.user_id.signature)\" data-o-mail-"
 "quote-container=\"1\">\n"
 "            <div data-o-mail-quote=\"1\">--<br data-o-mail-quote=\"1\"/><t t-"
@@ -973,8 +946,8 @@ msgstr ""
 "('draft', 'sent') else 'comanda'\"/>\n"
 "        Hola:\n"
 "        <br/><br/>\n"
-"        El vostre <t t-out=\"doc_name or ''\">pressupost</t> <span "
-"style=\"font-weight: bold;\" t-out=\"object.name or ''\"/>\n"
+"        El teu <t t-out=\"doc_name or ''\">pressupost</t> <span style=\"font-"
+"weight: bold;\" t-out=\"object.name or ''\"/>\n"
 "        <t t-if=\"object.origin\">\n"
 "            (amb referència: <t t-out=\"object.origin or ''\">S00052</t> )\n"
 "        </t>\n"
@@ -982,16 +955,16 @@ msgstr ""
 "out=\"format_amount(object.amount_total, object.currency_id) or ''\">10,00 "
 "€</span> està disponible per a revisar-se.\n"
 "        <br/>\n"
-"        <t t-set=\"documents\" t-value=\"object._get_product_documents()\"/"
-">\n"
+"        <t t-set=\"documents\" t-value=\"object._get_product_documents()\"/>"
+"\n"
 "        <t t-if=\"documents\">\n"
 "            <br/>\n"
 "            <t t-if=\"len(documents)&gt;1\">\n"
-"                Aquí té alguns documents addicionals que potser "
-"l'interessen:\n"
+"                Aquí hi ha alguns documents addicionals que potser "
+"t'interessen:\n"
 "            </t>\n"
 "            <t t-else=\"\">\n"
-"                Aquí té un document addicional que potser l'interessa:\n"
+"                Aquí hi ha un document addicional que potser t'interessa:\n"
 "            </t>\n"
 "            <ul style=\"margin-bottom: 0;\">\n"
 "                <t t-foreach=\"documents\" t-as=\"document\">\n"
@@ -1004,7 +977,7 @@ msgstr ""
 "            </ul>\n"
 "        </t>\n"
 "        <br/>\n"
-"        No dubti a contactar amb nosaltres si té qualsevol pregunta.\n"
+"        No dubtis a contactar amb nosaltres si tens qualsevol pregunta.\n"
 "        <t t-if=\"not is_html_empty(object.user_id.signature)\" data-o-mail-"
 "quote-container=\"1\">\n"
 "            <div data-o-mail-quote=\"1\">--<br data-o-mail-quote=\"1\"/><t t-"
@@ -2114,11 +2087,6 @@ msgid "Connect with your software!"
 msgstr "Connecta't amb el teu software!"
 
 #. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-msgid "Connect your software"
-msgstr "Connecteu el vostre software"
-
-#. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Connectors"
 msgstr "Connectors"
@@ -2919,8 +2887,7 @@ msgstr "Generar un enllaç de pagament"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Generate the invoice automatically when the online payment is confirmed"
-msgstr ""
-"Genereu la factura automàticament quan es confirmi el pagament en línia"
+msgstr "Genereu la factura automàticament quan es confirmi el pagament en línia"
 
 #. module: sale
 #. odoo-python
@@ -3053,8 +3020,7 @@ msgstr "Icona que indica una activitat d'excepció."
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_order__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
-"Si està marcat, hi ha nous missatges que requereixen la vostra atenció."
+msgstr "Si està marcat, hi ha nous missatges que requereixen la vostra atenció."
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_order__message_has_error
@@ -3780,8 +3746,8 @@ msgid ""
 "Once the quotation is confirmed by the customer, it becomes a sales order."
 "<br> You will be able to create an invoice and collect the payment."
 msgstr ""
-"Un cop el pressupost és confirmat pel client, esdevé una comanda de venda."
-"<br> Podreu crear-ne una factura i tramitar el pagament."
+"Un cop el pressupost és confirmat pel client, esdevé una comanda de "
+"venda.<br> Podreu crear-ne una factura i tramitar el pagament."
 
 #. module: sale
 #: model_terms:ir.actions.act_window,help:sale.action_orders
@@ -4792,8 +4758,7 @@ msgstr "Línies de comandes de venda a punt per ser facturades"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.view_sales_order_line_filter
 msgid "Sales Order Lines related to a Sales Order of mine"
-msgstr ""
-"Línies de comandes de vendes relacionades com una comanda de venda meva"
+msgstr "Línies de comandes de vendes relacionades com una comanda de venda meva"
 
 #. module: sale
 #. odoo-python
@@ -5745,7 +5710,7 @@ msgstr "Total"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__price_tax
 msgid "Total Tax"
-msgstr "Total impostos"
+msgstr "Total d'impostos"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_tree
@@ -6269,11 +6234,6 @@ msgid "sale order"
 msgstr "comanda de venda"
 
 #. module: sale
-#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-msgid "to create quotes automatically."
-msgstr "per crear pressupostos automàticament."
-
-#. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_template
 msgid "to learn all the ways to connect your software with"
 msgstr "per aprendre totes les maneres de connectar el vostre programari"
@@ -6285,8 +6245,8 @@ msgstr "unitats"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
-msgid "with"
-msgstr "amb"
+msgid "x"
+msgstr ""
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_pay_modal
@@ -6322,6 +6282,27 @@ msgid ""
 msgstr ""
 "{{ object.company_id.name }} {{ object.state in ('esborrany', 'enviat') and "
 "'Pressupost' or 'Comanda' }} (Ref. {{ object.name or 'no aplica' }})"
+
+#~ msgid "Connect your software"
+#~ msgstr "Connecteu el vostre software"
+
+#~ msgid "to create quotes automatically."
+#~ msgstr "per crear pressupostos automàticament."
+
+#~ msgid "with"
+#~ msgstr "amb"
+
+#~ msgid "2023-12-31"
+#~ msgstr "2023-12-31"
+
+#~ msgid "27.00"
+#~ msgstr "27,00"
+
+#~ msgid "30.00"
+#~ msgstr "30,00"
+
+#~ msgid "31.05"
+#~ msgstr "31,05"
 
 #~ msgid ""
 #~ "<span class=\"fa fa-lg fa-building-o p-2\" title=\"Values set here are "
